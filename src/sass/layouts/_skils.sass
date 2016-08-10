@@ -1,0 +1,107 @@
+.skils
+  +container(column, space-between, flex-start, $container-width)
+
+  padding:
+    top: $skils-padding-top
+    bottom: $skils-padding-bottom
+
+.skils-title
+  display: flex
+
+  margin:
+    bottom: $skils-title-margin-bottom
+  padding:
+    bottom: $skils-title-padding-bottom
+
+  font:
+    size: $skils-title-font-size
+  line-height: $skils-title-line-height
+
+.skils-form
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+
+.skils-form_input
+  display: none
+
+.skils-form_input:checked + .skils-form_label
+  &::before
+    background:
+      color: $skils-form-checkbox-checked-bg-color
+  &::after
+    opacity: 1
+
+.skils-form_label
+  position: relative
+
+  display: flex
+  flex-grow: 1
+  width: $skils-form_label-width
+  margin:
+    bottom: $skils-form_label-margin-bottom
+  padding:
+    left: $skils-form_label-padding-left
+
+  font:
+    size: $skils-form_label-font-size
+  line-height: $skils-form_label-line-height
+
+  color: $skils-form_label-color
+
+  &:nth-child(8n+8)
+    padding:
+      bottom: $skils-padding-bottom
+
+  &:last-child
+    padding:
+      bottom: 0
+
+  &::before
+    content: ""
+
+    position: absolute
+    top: $skils-form-checkbox-top
+    left: $skils-form-checkbox-left
+
+    display: block
+    width: $skils-form-checkbox-size
+    height: $skils-form-checkbox-size
+
+    background:
+      color: $skils-form-checkbox-bg-color
+    border-radius: rem-calc(4)
+
+    transition:
+      property: background-color
+      timing-function: ease
+      duration: 0.3s
+
+  &::after
+    content: ""
+
+    position: absolute
+    top: 4px
+    left: -5px
+
+    display: block
+    width: rem-calc(13)
+    height: rem-calc(6)
+
+    border:
+      left:
+        width: $vertical-gutter * 0.25
+        style: solid
+        color: white
+      bottom:
+        width: $vertical-gutter * 0.25
+        style: solid
+        color: white
+
+    opacity: 0
+    transform: rotate(-45deg)
+    transition:
+      property: opacity
+      timing-function: ease
+      duration: 0.3s

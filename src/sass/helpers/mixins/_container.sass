@@ -1,0 +1,22 @@
+=container($direction: row, $justify: space-between, $align: flex-start, $width: $container-width)
+  position: relative
+
+  display: flex
+  flex:
+    direction: $direction
+  justify-content: $justify
+  align-items: $align
+
+  width: $width
+  +centered
+  padding:
+    right: $container-padding-horizontal
+    left: $container-padding-horizontal
+
+  background:
+    color: $container-bg-color
+  border:
+    bottom:
+      width: $container-border-bottom-width
+      style: solid
+      color: $body-bg-color

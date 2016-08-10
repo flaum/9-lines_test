@@ -1,0 +1,76 @@
+.page_header
+  +container(row, space-between, flex-start, $container-width)
+
+  padding:
+    top: $page_header-padding-top
+    bottom: $page_header-padding-bottom
+
+  &::after
+    content: ""
+
+    position: absolute
+    right: $page_header-approved_icon-right
+    bottom: $page_header-approved_icon-bottom
+    z-index: 10
+
+    display: block
+    width: $page_header-approved_icon-width
+    height: $page_header-approved_icon-height
+    background:
+      image: $page_header-approved_icon-image
+      repeat: no-repeat
+      position: 50% 50%
+      size: $page_header-approved_icon-width $page_header-approved_icon-height
+
+.page_header-title
+  +visualy-hidden
+
+.page_header-author_photo
+  margin:
+    top: $page_header-author_photo-margin-top
+
+  border-radius: 50%
+  overflow: hidden
+
+.page_header-form
+  flex:
+    grow: 1
+
+  padding:
+    left: $page_header-form-padding-left
+
+.page_header-form_input
+  height: $page_header-form_input-height
+  margin: 0
+  padding:
+    top: $page_header-form_input-paddig-top
+    right: $page_header-form_input-paddig-horizontal
+    bottom: $page_header-form_input-paddig-bottom
+    left: $page_header-form_input-paddig-horizontal
+
+  font:
+    size: $page_header-form_input-font-size
+  line-height: $page_header-form_input-line-height
+  text-transform: uppercase
+
+  color: $page_header-form_input-color
+  border:
+    style: none
+    bottom:
+      width: $page_header-form_input-border-bottom-width
+      style: solid
+      color: $page_header-form_input-border-bottom-color
+  box-shadow: none
+
+  &:focus
+    border:
+      style: none
+      bottom:
+        width: $page_header-form_input-border-bottom-width
+        style: solid
+        color: $page_header-form_input-border-bottom-color
+    box-shadow: none
+
+  &:not(:last-child)
+    margin:
+      bottom: $page_header-form_input-margin-bottom
