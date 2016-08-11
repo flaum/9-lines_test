@@ -22,7 +22,7 @@
 .skils-form
   display: flex
   flex-direction: row
-  justify-content: space-between
+  // justify-content: space-between
   flex-wrap: wrap
 
 .skils-form_input
@@ -39,22 +39,24 @@
   position: relative
 
   display: flex
-  flex-grow: 1
+  // flex-grow: 1
   width: $skils-form_label-width
-  margin:
-    bottom: $skils-form_label-margin-bottom
   padding:
+    right: $skils-form_label-padding-right
     left: $skils-form_label-padding-left
 
   font:
     size: $skils-form_label-font-size
   line-height: $skils-form_label-line-height
+  text-transform: uppercase
 
   color: $skils-form_label-color
+  box-sizing: content-box
 
   &:nth-child(8n+8)
     padding:
-      bottom: $skils-padding-bottom
+      right: 0
+      bottom: $skils-form_label-padding-bottom
 
   &:last-child
     padding:
@@ -73,7 +75,7 @@
 
     background:
       color: $skils-form-checkbox-bg-color
-    border-radius: rem-calc(4)
+    border-radius: rem-calc(5)
 
     transition:
       property: background-color
@@ -88,8 +90,8 @@
     left: -5px
 
     display: block
-    width: rem-calc(13)
-    height: rem-calc(6)
+    width: rem-calc(11)
+    height: rem-calc(4)
 
     border:
       left:
