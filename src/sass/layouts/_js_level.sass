@@ -1,2 +1,66 @@
 .js_level
-  +container
+  +container(row, space-between, flex-start, $container-width)
+
+  padding:
+    top: $js_level-padding-top
+    bottom: $js_level-padding-bottom
+
+.js_level-indicator_wrapper
+  padding:
+    right: $js_level-indicator-padding-right
+
+.js_level-indicator_scale
+  position: relative
+
+  display: block
+  width: $js_level-indicator-width
+  height: $js_level-indicator-height
+
+  background:
+    image: $js_level-indicator-left-bg, $js_level-indicator-top-bg, $js_level-indicator-right-bg
+    repeat: no-repeat
+    position: 0 100%, 50% 0, 100% 100%
+    size: $js_level-indicator-left-width $js_level-indicator-left-height, $js_level-indicator-top-width $js_level-indicator-top-height, $js_level-indicator-right-width $js_level-indicator-right-height
+
+.js_level-indicator_toggle
+  position: absolute
+  right: 50% - 4.5
+  bottom: -9px
+
+  display: block
+  width: $js_level-toggle-width
+  height: $js_level-toggle-height
+
+  background:
+    image: $js_level-toggle-bg
+    repeat: no-repeat
+    position: 50% 50%
+    size: $js_level-toggle-width $js_level-toggle-height
+
+  transform-origin: 100% - 13 50%
+  transform: rotate(60deg)
+  transition: transform 0.1s ease
+
+.js_level-showing
+  padding:
+    top: $js_level-showing-padding-top
+    right: $js_level-showing-padding-right
+
+.js_level-title
+  margin: 0
+  padding:
+   bottom: $js_level-title-padding-bottom
+
+  font:
+    size: $js_level-title-font-size
+  line-height: $js_level-title-line-height
+
+  color: $js_level-title-color
+
+.js_level-showing_value
+  font:
+    family: $body-font-family-black
+    size: $js_level-value-font-size
+  line-height: $js_level-value-line-height
+
+  color: $js_level-value-color
